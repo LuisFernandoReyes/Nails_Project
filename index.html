@@ -1,38 +1,57 @@
-<!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nails Studio</title>
+    <title>Nails Studio | Uñas impecables con acabado premium</title>
+    <meta name="description" content="Agenda tu cita en Nails Studio y luce uñas acrílicas, gelish y diseños premium con acabado elegante.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN -->
+    <script>
+        tailwind = {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Cormorant Garamond', 'serif']
+                    },
+                    colors: {
+                        blush: '#fff6fb',
+                        rosegold: '#c28888',
+                        berry: '#9d174d',
+                        ink: '#24111a'
+                    },
+                    boxShadow: {
+                        soft: '0 25px 70px rgba(157, 23, 77, 0.12)',
+                        glass: '0 18px 60px rgba(36, 17, 26, 0.18)'
+                    }
+                }
+            }
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navbar -->
-    <div id="navbar"></div>
+<body class="bg-[linear-gradient(180deg,#fffdfd_0%,#fff7fb_48%,#fff3f8_100%)] font-sans text-ink antialiased">
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top,rgba(244,114,182,0.16),transparent_55%)]"></div>
 
-    <!-- Hero -->
-    <div id="hero">
+        <div id="navbar"></div>
 
-    </div>
+        <main>
+            <div id="hero"></div>
+            <div id="gallery"></div>
+            <div id="services"></div>
+            <div id="about"></div>
+            <div id="testimonials"></div>
+            <div id="cta"></div>
+        </main>
 
-    <!-- Gallery -->
-    <div id="gallery">
-
-    </div>
-
-    <!-- Services -->
-    <div id="services">
-
-    </div>
-
-    <!-- Footer -->
-    <div id="footer">
-
+        <div id="footer"></div>
     </div>
 
     <script src="./js/main.js"></script>
