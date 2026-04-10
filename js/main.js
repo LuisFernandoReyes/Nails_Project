@@ -1,4 +1,4 @@
-﻿const components = [
+const components = [
   ['navbar', './partials/navbar.html'],
   ['hero', './partials/hero.html'],
   ['gallery', './partials/gallery.html'],
@@ -10,7 +10,7 @@
 ];
 
 const navLinks = [
-  { href: '#gallery', label: 'Diseños' },
+  { href: '#gallery', label: 'Lookbook' },
   { href: '#services', label: 'Servicios' },
   { href: '#about', label: 'Experiencia' },
   { href: '#testimonials', label: 'Opiniones' }
@@ -31,8 +31,8 @@ const loadComponent = async (id, file) => {
   } catch (error) {
     target.innerHTML = `
       <section class="mx-auto max-w-4xl px-6 py-10">
-        <div class="rounded-3xl border border-rose-200 bg-white p-6 text-center text-rose-700 shadow-soft">
-          Hubo un problema al cargar esta sección.
+        <div class="rounded-3xl border border-stone-200 bg-white p-6 text-center text-stone-700 shadow-soft">
+          Hubo un problema al cargar esta seccion.
         </div>
       </section>
     `;
@@ -54,14 +54,14 @@ const initNavbar = () => {
   desktopLinks.innerHTML = navLinks
     .map(
       ({ href, label }) =>
-        `<a href="${href}" class="text-sm font-semibold text-slate-700 transition hover:text-berry">${label}</a>`
+        `<a href="${href}" class="text-sm font-semibold text-stone-700 transition hover:text-mulberry">${label}</a>`
     )
     .join('');
 
   mobileLinks.innerHTML = navLinks
     .map(
       ({ href, label }) =>
-        `<a href="${href}" class="block rounded-2xl px-4 py-3 font-semibold text-slate-700 transition hover:bg-rose-50 hover:text-berry">${label}</a>`
+        `<a href="${href}" class="block rounded-2xl px-4 py-3 font-semibold text-stone-700 transition hover:bg-stone-100 hover:text-mulberry">${label}</a>`
     )
     .join('');
 
